@@ -1,0 +1,36 @@
+Run mode     : improved
+Class weight : True   Model selection: val macro_f1
+Split        : train 700 / val 150 / test 150
+Epochs       : 8   Batch size: 8   LR: 2e-05
+Selected     : epoch 3  (val acc=0.6800, val macro_f1=0.5254)
+
+---- TEST SET (held out, evaluated once) ----
+Accuracy    : 0.6533
+Macro F1    : 0.4856
+Weighted F1 : 0.6252
+
+              precision    recall  f1-score   support
+
+         yes     0.6842    0.7831    0.7303        83
+          no     0.6038    0.6275    0.6154        51
+       maybe     0.5000    0.0625    0.1111        16
+
+    accuracy                         0.6533       150
+   macro avg     0.5960    0.4910    0.4856       150
+weighted avg     0.6372    0.6533    0.6252       150
+
+Confusion matrix (rows=true, cols=pred):
+              yes       no    maybe
+    yes       65       17        1
+     no       19       32        0
+  maybe       11        4        1
+
+---- Validation, per epoch ----
+  epoch 1: acc=0.3467  macro_f1=0.1779  f1_yes=0.024  f1_no=0.510  f1_maybe=0.000
+  epoch 2: acc=0.5800  macro_f1=0.4133  f1_yes=0.631  f1_no=0.609  f1_maybe=0.000
+  epoch 3: acc=0.6800  macro_f1=0.5254  f1_yes=0.770  f1_no=0.596  f1_maybe=0.211
+  epoch 4: acc=0.6400  macro_f1=0.5094  f1_yes=0.722  f1_no=0.607  f1_maybe=0.200
+  epoch 5: acc=0.6400  macro_f1=0.5024  f1_yes=0.728  f1_no=0.625  f1_maybe=0.154
+  epoch 6: acc=0.6133  macro_f1=0.4814  f1_yes=0.715  f1_no=0.608  f1_maybe=0.121
+  epoch 7: acc=0.6467  macro_f1=0.5093  f1_yes=0.724  f1_no=0.637  f1_maybe=0.167
+  epoch 8: acc=0.6533  macro_f1=0.4835  f1_yes=0.746  f1_no=0.614  f1_maybe=0.091
